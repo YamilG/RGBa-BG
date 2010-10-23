@@ -1,9 +1,10 @@
-<h1>Readme</h1>
-<p>Prueba de readme en markdown.</p>
-<ul>
-	<li>Lista 1</li>
-	<li>Lista2</li>
-</ul>
+Readme
+======
+Prueba de readme en **markdown**.
+----------------------------
 
-<p>Prueba con code</p>
-<code>codigo dentro de code</code>
++ Lista 1
++ Lista 2
+
+Prueba con *code*
+`codigo dentro de code`
