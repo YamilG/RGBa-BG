@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+        <title>RBBa Background Example</title>
+        
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        
+        
+<script type="text/javascript">
+
+
+//RGBa - Option 1
+$(document).ready(function(){
+        $('#frame').addClass('box-off');
+        $('#activator1').click(function() {
+                if ($('#frame').hasClass('box-on')) {
+                        $('#frame').removeClass('box-on');
+                        $('#frame').addClass('box-off');
+                        $('#container').removeClass('bgRgba');
+                } else {
+                        $('#frame').removeClass('box-off');
+                        $('#frame').addClass('box-on');
+                        $('#container').addClass('bgRgba');
+                }
+        });
+        
+// Desactivate 
+        $('#desactivate').click(function() {
+                $('#frame').removeClass('box-on');
+                $('#frame').addClass('box-off');
+                $('#container').removeClass('bgRgba');  
+        });
+
+});
+</script>
+
+        
+<style type="text/css">
+body {
+        margin:0;
+}
+
+#container {
+        position: absolute;     
+        left: 0; 
+        width: 100%; 
+        height:100%;
+        z-index: 100; 
+}       
+
+#content {
+        width:960px;
+        margin:0 auto;
+}
+
+#frame {
+        background:#ccc;
+        padding:10px;
+        position:absolute;
+        top:50%;
+        height:282px;
+        margin-top:-141px;
+        left:50%;
+        width:374px;
+        margin-left:-187px;
+        box-shadow: 5px 5px 50px #888;
+        -moz-box-shadow: 5px 5px 50px #888;
+        -webkit-box-shadow: 5px 5px 50px #888;
+}
+        
+.box-on {
+        display:block;
+}
+        
+.box-off {
+        display:none;
+}
+        
+.bgRgba {
+        background: rgba(120, 211, 181, 0.8);
+}
+        
+#frame, #desactivate, #frame img {
+        border-radius: 10px; 
+        -moz-border-radius: 10px;  
+        -webkit-border-radius: 10px;
+}
+
+#desactivate {
+        background-color:black;
+        color:red;
+        padding:10px;
+        cursor:pointer;
+}
+        
+        </style>
+        
+</head>
+
+
+<body> 
+<div id="container">
+        
+        <div id="content">
+        <h1>RGBa Background Example</h1>
+        <h2>CSS3/jQuery</h2>
+        
+        <ol>
+                <li id="activator1"><a href="#">Activate RGBa background</a></li>
+        </ol>
+
+        <p>Nulla quam nunc, porttitor non sollicitudin ut, gravida quis ante. Maecenas nec quam arcu. Suspendisse in ante sed metus ullamcorper consequat. Curabitur quis dolor sapien, ac tempor justo. Donec vitae eros et felis ultricies malesuada. Phasellus felis elit, congue ac lobortis a, suscipit et enim. Vivamus feugiat neque ac risus sodales nec volutpat metus consectetur. Suspendisse semper nunc mi, ac dignissim eros. Pellentesque tempus, enim scelerisque sodales venenatis, urna elit fermentum dolor, ut pharetra arcu diam eget odio. Pellentesque faucibus tincidunt dui, in viverra massa pretium sed. Mauris ultricies adipiscing tellus sit amet fringilla. Aliquam eget leo augue, ac volutpat erat. Cras blandit fermentum massa, vel varius quam sagittis non. Nullam sodales scelerisque diam tempus eleifend. Donec rhoncus nisl ac mauris auctor quis vulputate ante suscipit. Curabitur a sem non metus pretium fermentum. Pellentesque rutrum, nisl et lobortis sagittis, velit est aliquam magna, id volutpat odio elit vel felis. Phasellus vitae tincidunt sem. Nunc semper dictum nisi posuere laoreet. Integer consequat ornare lorem nec mollis.</p>
+        </div>
+
+<div id="frame"><img src="rickrolled.jpg" /><span id="desactivate">Desactivate</span></div>
+</div>  
+
+</body>
+
+
+</html>
